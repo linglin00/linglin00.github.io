@@ -255,7 +255,7 @@ $(document).ready(function () {
   $scope.preloadImages = function() {
   for(var i = $scope.minValue; i <= $scope.maxValue; i++) {
   var img = new Image();
-  img.src = $scope.urlTemplate({dateValue: i});
+  img.src = "project3/" + $scope.urlTemplate({dateValue: i});
   }
   };
   // Preload All Map Images
