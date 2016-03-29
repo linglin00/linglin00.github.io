@@ -13,18 +13,18 @@
 
 <title></title>
 
-<script src="Project3_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="http://linglin00.github.io/Project3_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="Project3_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="Project3_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="Project3_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="Project3_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="http://linglin00.github.io/Project3_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="http://linglin00.github.io/Project3_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="http://linglin00.github.io/Project3_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="http://linglin00.github.io/Project3_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <link rel="stylesheet"
-      href="Project3_files/highlight/default.css"
+      href="http://linglin00.github.io/Project3_files/highlight/default.css"
       type="text/css" />
-<script src="Project3_files/highlight/highlight.js"></script>
+<script src="http://linglin00.github.io/Project3_files/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -93,7 +93,7 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="Project3_files/navigation-1.0/tabsets.js"></script>
+<script src="http://linglin00.github.io/Project3_files/navigation-1.0/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -140,61 +140,74 @@ Group 7 Team
 <h4>
 <b>Introduction:</b>
 </h4>
-<p>Health resources distribution in US is an important issue that concerns most of its citizens. It is strongly related to the social fair and public good.</p>
-<p>Our team was interested to find whether the health resource distribution such as the number of hospitals and hospital beds, number of doctors and the number of medical students in each state is correlated to the demand of the medical resource and the income of the residence in each state or not. To find answers, we used the data resource from the The Health Resources and Services Administration (HRSA) (<a href="http://ahrf.hrsa.gov/" class="uri">http://ahrf.hrsa.gov/</a>). The Health Resources and Services Administration (HRSA) is the primary Federal agency for improving access to health care services for people.</p>
+<p>Health resource distribution in the US is an important issue that concerns most of its citizens. It is strongly related to the wellbeing of the general public.<br/></p>
+<p>Our team was interested in exploring whether the distribution of various health resources (the number of hospitals, hospital beds, etc.) are correlated with more general factors such as expenditures and income per capita. To find these answers, we used The Health Resources and Services Administration (HRSA) (<a href="http://ahrf.hrsa.gov/" class="uri">http://ahrf.hrsa.gov/</a>) downloadable database. The Health Resources and Services Administration (HRSA) is the primary Federal agency for improving access to health care services for people. <br/></p>
 <br/>
 <h4>
 <p style="text-decoration: underline">
 Demographics and Hospitals
 </p>
 </h4>
-In order to visualize the imbalance of health care resources among 50 states, we used subset data containing state level income per capita, population, population density, total hospitals, total hospital bed, primary physicians between 2010 and 2012. We used Shiny application. <br/>
+<p>In order to visualize the distribution of health care resources among the 50 states, we used a subset of data containing state level income per capita, population, population density, total hospitals, total hospital beds and number primary physicians. It is important to note that for these visuals, only three years were examined (2010-2012) and that each of the above metrics were normalized to put them on a per capita basis.<br/></p>
 <div style="width: 100%">
-<img src="shiny.png" style="width: 100%"/>
+<img src="http://linglin00.github.io/shiny.png" style="width: 100%"/>
 </div>
-<p><a href="https://ll2948.shinyapps.io/HealthCare/" style="color: blue">click here to run the application.</a> <br/> <br/> The shiny application is composed of 3 panels. The top panel shows a colored US state map by income per capita, population density, hospitals per 1000 people, hospital bed per 1000 people, or primary care physicians per 1000 people based on quantile. The bottom left panel displays a bubble chart with income per capita as vertical axis, hospitals per 1000 people, hospital bed per 1000 people, or primary care physicians per 1000 people as horizontal axis. The size of bubble is based on population density, the color of bubble is based on region. The bottom right panel is the control panel, used to choose the category, and the year to plot.<br/><br/> The income per capita map shows the north east states are among richest states as we expected. Also DC, California are rich too. Wyoming, North Dakoda are richer than California.<br/><br/> When we look at population density map, population has high concentration in East and West coast states. When we look at the hospitals per 1000 people map, the mid-west area is high in that category, as well as hospital bed per 1000 people. New York and California are among lowest 10% in terms of hospitals per 1000 people. But New York State is in the middle in terms of hospital beds per 1000 people, while California is still in the lowest 10% in that category. It tells us New York state hospitals have more bed on average. While Washington, Oregon, California have not lots of hospitals, hospital beds, but they has good resource in primary care physicians. The concerning part is that a few states are lacking primary care physicians, like Idaho, Nevada, Utah, Texas, etc.. The map shows the imbalanced distribution of primary care physicians.<br/><br/> The bubble chart shows it doesn’t have much correlation between income per capital and hospital, hospital bed, but strong correlation between income per capital and primary care physicians per 1000 people.<br/><br/></p>
+<p><a href="https://ll2948.shinyapps.io/HealthCare/" style="color: blue">click here to run the application.</a> <br/> <br/> The shiny application is composed of 3 panels. The top panel shows a colored US state map showing income per capita, population density, hospitals per capita, hospital bed per capita and primary care physicians per capita based. The bottom left panel displays a bubble chart with income per capita on the vertical axis, and the above listed variables on the horizontal axis. The bubble sizes vary based on population density and the color of bubble is based on the geographical region of each state. The bottom right panel is the control panel, used to choose the category and year to plot.<br/><br/></p>
+<p>The income per capita map shows that states located in the Northeast, as well as a few other states to the west are amongst the wealthiest. <br/><br/></p>
+<p>When we look at population density, we can observe high concentrations along the East and West coasts. The mid-west is particularly high in hospitals per capita as well as hospital bed per capita. Interestingly, New York and California are among lowest 10% in terms of hospitals capita but New York is in the middle in terms of hospital beds per capita, while California is still in the lowest 10%. Perhaps this is because hospitals in New York cater to urban citizens so their medical centers are much larger. While Washington, Oregon and California have fewer hospitals and hospital beds, they don’t seem to be lacking in terms of number of primary care physicians. A potential cause for concern is the lack of primary care physicians in places like Idaho, Nevada, Utah and Texas. The map shows the imbalanced distribution of primary care physicians.<br/><br/></p>
+<p>The bubble chart shows little correlation between income per capital and hospitals/hospital beds, but fairly strong correlation between income per capita and primary care physicians.<br/><br/></p>
 <br/>
 <h4>
 <p style="text-decoration: underline">
 Analysis of sample states
 </p>
 </h4>
-<p>In order to obtain improved understanding of the relationship between the factors affecting the resource distribution, we looked at few states in greater detail. We chose the data in most recent year 2012, and six presentation states - North Dakota (ND), New York (NY), California (CA), Texas (TA), Washington (WA), Virginia (VA), which cover the different levels of developing, income and scale of population. The dataset includes the number of hospital admissions, the population, the total medical expense, income, number of doctors, number of hospitals, number of beds and number of students. <br/></p>
 <h5>
 <center>
-Figure 2: Income per Capital in Each State (unit $)
+<b>Hospital Admissions for Selected States</b>
 </center>
 </h5>
 <div style="text-align: center; width: 100%">
-<img src="Income.png" width="50%" />
+<p><img src="http://linglin00.github.io/HospitalAdmission.png" width="50%"/></p>
 </div>
-<br/> We can find that the income per capital in NY and ND are apparently higher than other four states. The income per capital and the hospital admissions in each state represents the metric to evaluate the developing level and the demanding of the medical resource in each state.<br/>
+<p>In order to obtain an improved understanding of the relationship between factors affecting the resource distribution, we looked at a few states in greater detail. We chose to analyze the most recent data (from 2012) and six states - North Dakota (ND), New York (NY), California (CA), Texas (TA), Washington (WA) and Virginia (VA), which we believe provide information that can be inferred on the general population. The dataset includes the number of hospital admissions, the population, total medical expenses, income, number of doctors, number of hospitals, number of beds and number of students. <br/></p>
 <h5>
 <center>
-Figure 3 : Correlation of factors in each state
+<b>Income per Capital in Each State (unit $)</b>
 </center>
 </h5>
-<p><img src="Project3_files/figure-html/unnamed-chunk-1-1.png" title="" alt="" width="50%" style="display: block; margin: auto;" /> <br/> Here we evaluate the correlation between the medical resource distribution including the number of doctors per hospital admission, the number of hospitals per hospital admission, the number of beds per hospital admission, and the number of graduated medical students per hospital admission in 2012, and the number of hospital admissions, population, medical expense and the income per capital in each state. <br/><br/></p>
-<p>The result is quite interesting, we find the number of doctors is positively correlated to the number of hospital admissions, but the number of hospital and beds are negatively correlated to the number of hospital admissions. It means that, in the state with big number of hospital admission like CA, NY, there would be more doctors in these states but the number of hospitals and beds in the hospital are less then other states. We can infer that in these states, more doctors would stay in the big hospitals and serve many residences in the nearby communities. While in other States like WA and VA, the residences lived more distributed and there are many small hospitals in these states. In each hospital there is only a small number of doctors. These two different patterns could be inferred from the correlation graph.<br/><br/></p>
-Another interesting result is that the number of medical students is strongly correlated to the income of the state. This seems intuitive because many medical schools are also hospitals. Since doctors are in the higher income category, we expect the respective states to have higher income too. <br/> <br/> <br/>
+<div style="text-align: center; width: 100%">
+<img src="http://linglin00.github.io/Income.png" width="50%" />
+</div>
+<p><br/> The gauge plot shows that the income per capita in NY and ND are apparently higher than the other four states, leading us to believe that perhaps hospital employees and expenditures are correlated.<br/></p>
+<h5>
+<center>
+<b>Correlation of factors in each state</b>
+</center>
+</h5>
+<p><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-1-1.png" title="" alt="" width="50%" style="display: block; margin: auto;" /> <br/> Here we evaluate the correlation between various medical resources and some more general demographic information. The results are quite interesting, we find the number of doctors is positively correlated with the number of hospital admissions, but the number of hospitals and hospital beds are negatively correlated with the number of hospital admissions. This means that in a state with a high number of hospital admissions like CA, NY we might find more doctors but fewer hospitals and hospital beds. This might be because in these states, more doctors work in larger hospitals that serve many people in denser communities. While in other States like WA and VA, the population density is much sparser and there are many small hospitals serving smaller communities.<br/><br/></p>
+Another interesting result is that the number of medical students is strongly correlated to the income of the state. This seems intuitive because many medical schools are also hospitals. Since doctors are in the higher income category, we would expect the respective states to have a higher income as well <br/> <br/> <br/>
 <h4>
 <p style="text-decoration: underline">
 Race and Beds Distribution
 </p>
 </h4>
-<p>In this section, we look deeper into health facility distribution, which is defined as number of beds per 1000 persons in different states. We use the panel data from 2000 to 2012.<br/><br/> Intuitively, the age structure of a population has something to do with the number of beds per 1000 persons: older the population, more demand for the health facilities. Our question is that does this relationship robust among different races, which means whether the proportions of white elders and black elders are both good positive indicators for the number of beds per 1000 persons.<br/></p>
-<p><img src="Project3_files/figure-html/unnamed-chunk-2-1.png" title="" alt="" width="100%" /><img src="Project3_files/figure-html/unnamed-chunk-2-2.png" title="" alt="" width="100%" /><img src="Project3_files/figure-html/unnamed-chunk-2-3.png" title="" alt="" width="100%" /> <br/></p>
-<p>We draw two trellis plots for the number of beds per 1000 persons v.s. logarithm proportion of blank male over 65 and logarithm proportion of white male over 65. We can see that, within each year, local polynomial regression shows dramatic negative relationship between logarithm proportion of blank male over 65 and the number of beds per 1000 persons in two major intervals. The trend is even more straightforward if we fit a linear regression to the data. As for the logarithm proportion of white male over 65, we can observe evident positive relationship between it and the number of beds per 1000 person in the middle interval of local polynomial regression. Also, the positive linear trend exits.<br/><br/> To do it more formally, we use fixed effect model for panel data to train a model in order to fit the data. We have the proportions of black male over 65, black female over 65, white male over 65 and white female over 65. The F statistic and the p-value along with the trellis plot of observed value v.s. fitted value can show that it’s a good model to fit the data. In this model, the coefficient of proportion of black male over 65 is negative.<br/><br/> With these relationships, we may not be able to say that racial inequality accounts for the inequality of health facility distribution in terms of number of beds per 1000 persons because we need to control for several other variables. However, these relationships at least offer us some hints to explore in the further studies.<br/> <br/> <br/></p>
+<p>In this section, we will examine the number of beds per capita in different states more closely. We use the panel data from 2000 to 2012.<br/><br/></p>
+<p>We also decided to explore whether race was an indicator for number of beds per capita by examining the proportion of Caucasians and African-Americans.<br/></p>
+<p><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-2-1.png" title="" alt="" width="100%" /><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-2-2.png" title="" alt="" width="100%" /><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-2-3.png" title="" alt="" width="100%" /> <br/></p>
+<p>The first trellis plot looks at the number of beds per capita versus the logarithm proportion of blank males over 65 years of age while the second looks at the number of beds per capita versus the logarithm proportion of white males over 65. We can see that local polynomial regression shows a negative relationship between the proportion of African-American males and the number of beds per capita in two major intervals. The trend is even more visible if we fit a linear regression to the data. We can observe a positive relationship between the proportion of Caucasian males and the number of beds per capita in the middle interval of local polynomial regression as well as a positive linear trend.<br/><br/></p>
+<p>More formally, we use a fixed effect model for the panel data to train a model in order to fit the data. The F statistic and the p-value along with the actual plots show that the model fits the data well.<br/><br/></p>
+<p>We are not able to definitively say that racial inequality accounts for the discrepancy in the number of beds per capita because we would need much more information to give a concrete explanation. However, these relationships shed some insight as to which areas we could explore further.<br/> <br/> <br/></p>
 <h4>
 <p style="text-decoration: underline">
 Hospitals and Patient admissions
 </p>
 </h4>
-<p>There is high positive correlation between number of hospitals and number of patient admissions at national level. We expect that since patients will have more access where there are more hospitals. However, we wanted to check if the number of admissions always goes up with number of hospitals for each state.<br/></p>
-<img src="Project3_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="100%" /> <br/> We geneated distribution of hospitals and patient admissions across states. There is a general trend of more admissions where there are more hospitals. However, there are a few exceptions:<br/>
+<p>There is high positive correlation between number of hospitals and number of patient admissions at the national level. This is expected, since patients will have more access where there are more hospitals. However, we wanted to check if the number of admissions always increases with number of hospitals in each state.<br/></p>
+<img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="100%" /> <br/> We generated a distribution of hospitals and patient admissions across states and there is a general trend of more admissions where there are more hospitals. However, there are a few notable exceptions:<br/>
 <ul>
 <li>
-TX has the most number of hospitals but CA has the highest number of patient admissions.
+TX has the most number of hospitals but CA has the highest number of patient admissions
 </li>
 <li>
 NY and FL have similar number of hospitals and admissions
@@ -203,26 +216,26 @@ NY and FL have similar number of hospitals and admissions
 Although IL and LA have same number of hospitals, LA has far fewer admissions
 </li>
 </ul>
-<p><br/> This graph also explores if market crash of 2008 had effect on the number of hospitals and admissions. From the graph, we do not see any significant change in patient admissions except in CA. We will need more details on CA admissions to make any inferences.<br/> <br/> <br/></p>
+<p><br/> This graph also explores the effect of the 2008 market crash on the number of hospitals and admissions. From the graph, we do not see any discernable change in patient admissions except in CA. We need more details on CA admissions to make any definitive conclusions.<br/> <br/> <br/></p>
 <h4>
 <p style="text-decoration: underline">
-??Section5 Heading (Priyatosh)??
+Visual Comparison of States
 </p>
 </h4>
-<p>In order to find additional dependence between Average Hospital Admission, Population by Age, Number of Hospitals and Total population of various states, following correlation plot and chord diagram was prepared. Strong correlation can be observed between average number of hospital beds and patient admission.<br/></p>
-<p><img src="Project3_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="50%" /> <br/> <img src="Project3_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="60%" /></p>
+<p>In order to find additional dependence between Average Hospital Admission, Population by Age, Number of Hospitals and Total population of various states, the following correlation plot and chord diagram was prepared. Strong correlation can be observed between average number of hospital beds and patient admission.<br/></p>
+<p>We wanted to further analyze the correlation of age with number of admissions and number of beds. Correlation plot of average hospital admissions, population by age, number of hospitals and total population of various states was generated. Strong correlation is observed between these factors.<br/></p>
+<p><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="50%" style="display: block; margin: auto;" /> <br/> We generated a Circos plot to explore how select states compared in population, number of hospitals, hospital beds and admissions in 2012. The states studied are the top ten by population i.e. CA, TX, NY, FL, IL, PA, OH, GA, MI, NC. Of these states, we find that CA scores more than the other states in all categories - population, beds, admissions and <br/></p>
+<p><img src="http://linglin00.github.io/Project3_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="60%" style="display: block; margin: auto;" /></p>
 <h4>
 <p style="text-decoration: underline">
-??Section6 Heading (Daniel)??
+Evolution of Health Metrics Over Time
 </p>
 </h4>
-<iframe width="1200" height="900" style="text-align:middle" src="https://linglin00.github.io/HealthExpenditure.html" frameborder="0" allowfullscreen>
+<p>Lastly, we wanted to examine how a few of the important variables changed over time. Specifically, the trends of health expenditures, inpatient days and total number of health personnel (physicians, dentists, RNs, etc.) were visualized. The first plot below is a choropleth map of total health expenditures per capita in each state. Clearly, there is a relation between the geographic location of each state and health expenditures. In general, the western and southern states tend to spend less than the northern (specifically northeastern) states. States like New York, North Dakota and South Dakota are consistently amongst the states with the highest expenditures while Nevada, Idaho, Arizona and Utah are amongst the lowest. Montana is another interesting state to watch: its expenditures increased consistently from 1995-2012. <br/></p>
+<iframe width="1200" height="800" style="text-align:middle" src="https://linglin00.github.io/HealthExpenditure.html" frameborder="0" allowfullscreen>
 </iframe>
-<br/> <img src="bubbles.gif" style="width: 1200px"/> <br/>
-<div width="100%">
-<p><img src="HospitalAdmission.png" width="48%" style="padding: 10px"/></p>
-</div>
-<p><br/> <br/></p>
+<p>The last chart is a bubblechart of inpatient days per capita vs. the number of health personnel per capita where the size of the bubble is determined by health expenditures. The one state (or district) that immediately stands out is DC. In every year from 1996-2012, it is the leader in all three of the aforementioned categories by a very large margin. Another interesting observation is the trend of the chart over the years. As time elapses, the number of inpatient days per capita seems to decrease, while the number of employees per capita and health expenditures seem to be increasing. This is a bit odd; we would expect the number of inpatient days to increase as the “baby boomers” age and the healthcare system is forced to take on more elderly patients. It is also important to mention that the western states are always clustered at the bottom left corner of the chart and are the lowest in all three categories.<br/></p>
+<p><img src="http://linglin00.github.io/bubbles.gif" style="width: 1200px"/></p>
 
 
 
